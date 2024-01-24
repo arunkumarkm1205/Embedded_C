@@ -1357,3 +1357,6 @@ java.lang.Exception: Resource '/first_project' does not exist.
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-01-24 10:16:42.423
 !MESSAGE Indexed 'LED_blinck_HAL' (23 sources, 83 headers) in 2.23 sec: 5,451 declarations; 30,773 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0055%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-24 11:42:10.297
+!MESSAGE Indexed 'ON_BOARD_PUSH_BUTTON' (23 sources, 83 headers) in 1.23 sec: 5,451 declarations; 30,773 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0055%)
