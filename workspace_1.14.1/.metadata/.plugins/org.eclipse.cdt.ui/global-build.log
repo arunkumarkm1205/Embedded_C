@@ -1,91 +1,33 @@
-12:05:08 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-12:05:13 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-12:05:46 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
+13:59:38 **** Incremental Build of configuration Debug for project INTRUPT_PUSH_BUTTON ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ON_BOARD_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\ON_BOARD_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ON_BOARD_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ON_BOARD_PUSH_BUTTON.elf
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:71:9: warning: implicit declaration of function 'HAL_GPIO_EXIT_Callback'; did you mean 'HAL_GPIO_EXTI_Callback'? [-Wimplicit-function-declaration]
+   71 |         HAL_GPIO_EXIT_Callback();
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+      |         HAL_GPIO_EXTI_Callback
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:194:6: warning: conflicting types for 'HAL_GPIO_EXIT_Callback'; have 'void(uint16_t)' {aka 'void(short unsigned int)'}
+  194 | void HAL_GPIO_EXIT_Callback(uint16_t GPIO_Pin)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:71:9: note: previous implicit declaration of 'HAL_GPIO_EXIT_Callback' with type 'void(uint16_t)' {aka 'void(short unsigned int)'}
+   71 |         HAL_GPIO_EXIT_Callback();
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "INTRUPT_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\INTRUPT_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INTRUPT_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INTRUPT_PUSH_BUTTON.elf
  
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-arm-none-eabi-objdump -h -S ON_BOARD_PUSH_BUTTON.elf  > "ON_BOARD_PUSH_BUTTON.list"
+arm-none-eabi-size  INTRUPT_PUSH_BUTTON.elf 
+arm-none-eabi-objdump -h -S INTRUPT_PUSH_BUTTON.elf  > "INTRUPT_PUSH_BUTTON.list"
    text	   data	    bss	    dec	    hex	filename
-   7992	     20	   1572	   9584	   2570	ON_BOARD_PUSH_BUTTON.elf
+   8060	     20	   1572	   9652	   25b4	INTRUPT_PUSH_BUTTON.elf
 Finished building: default.size.stdout
  
-Finished building: ON_BOARD_PUSH_BUTTON.list
+Finished building: INTRUPT_PUSH_BUTTON.list
  
-12:06:46 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
+13:59:55 **** Incremental Build of configuration Debug for project INTRUPT_PUSH_BUTTON ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ON_BOARD_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\ON_BOARD_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ON_BOARD_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ON_BOARD_PUSH_BUTTON.elf
- 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-arm-none-eabi-objdump -h -S ON_BOARD_PUSH_BUTTON.elf  > "ON_BOARD_PUSH_BUTTON.list"
+arm-none-eabi-size  INTRUPT_PUSH_BUTTON.elf 
    text	   data	    bss	    dec	    hex	filename
-   7992	     20	   1572	   9584	   2570	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-Finished building: ON_BOARD_PUSH_BUTTON.list
- 
-12:07:32 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ON_BOARD_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\ON_BOARD_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ON_BOARD_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ON_BOARD_PUSH_BUTTON.elf
- 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-arm-none-eabi-objdump -h -S ON_BOARD_PUSH_BUTTON.elf  > "ON_BOARD_PUSH_BUTTON.list"
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-Finished building: ON_BOARD_PUSH_BUTTON.list
- 
-12:08:20 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ON_BOARD_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\ON_BOARD_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ON_BOARD_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ON_BOARD_PUSH_BUTTON.elf
- 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-arm-none-eabi-objdump -h -S ON_BOARD_PUSH_BUTTON.elf  > "ON_BOARD_PUSH_BUTTON.list"
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-Finished building: ON_BOARD_PUSH_BUTTON.list
- 
-12:09:05 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ON_BOARD_PUSH_BUTTON.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\ON_BOARD_PUSH_BUTTON\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ON_BOARD_PUSH_BUTTON.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ON_BOARD_PUSH_BUTTON.elf
- 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-arm-none-eabi-objdump -h -S ON_BOARD_PUSH_BUTTON.elf  > "ON_BOARD_PUSH_BUTTON.list"
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
-Finished building: default.size.stdout
- 
-Finished building: ON_BOARD_PUSH_BUTTON.list
- 
-12:09:33 **** Incremental Build of configuration Debug for project ON_BOARD_PUSH_BUTTON ****
-make -j12 all 
-arm-none-eabi-size  ON_BOARD_PUSH_BUTTON.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7988	     20	   1572	   9580	   256c	ON_BOARD_PUSH_BUTTON.elf
+   8060	     20	   1572	   9652	   25b4	INTRUPT_PUSH_BUTTON.elf
 Finished building: default.size.stdout
  
