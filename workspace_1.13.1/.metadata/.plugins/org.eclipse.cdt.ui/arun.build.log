@@ -1,0 +1,18 @@
+11:52:47 **** Incremental Build of configuration Release for project arun ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:22:14: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+   22 |     printf("%d",sizeof(grp1));
+      |             ~^  ~~~~~~~~~~~~
+      |              |  |
+      |              |  long long unsigned int
+      |              int
+      |             %lld
+..\main.c:20:9: warning: unused variable 'a' [-Wunused-variable]
+   20 |     int a;
+      |         ^
+g++ -o arun.exe main.o 
+
+11:52:48 Build Finished. 0 errors, 2 warnings. (took 1s.11ms)
+

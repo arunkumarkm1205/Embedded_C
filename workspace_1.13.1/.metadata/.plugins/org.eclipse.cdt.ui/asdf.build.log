@@ -1,0 +1,9 @@
+19:12:51 **** Incremental Build of configuration Debug for project asdf ****
+Info: Internal Builder is used for build
+g++ -o asdf.exe asdf.o asdfg.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: asdfg.o: in function `main':
+C:/Users/arunk/STM32CubeIDE/workspace_1.13.1/asdf/Debug/../asdfg.c:9: multiple definition of `main'; asdf.o:C:/Users/arunk/STM32CubeIDE/workspace_1.13.1/asdf/Debug/../asdf.c:16: first defined here
+collect2.exe: error: ld returned 1 exit status
+
+19:12:51 Build Failed. 2 errors, 0 warnings. (took 422ms)
+

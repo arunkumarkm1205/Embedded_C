@@ -1,0 +1,26 @@
+#include "stm32f3xx.h"
+void delay(unsigned int a )
+{
+	for(int i =0;i<a;i++)
+		for(int j=0;j<6000;j++);
+}
+int main(){
+	RCC ->AHBENR=(1U<<17)|(1U<<19);
+	GPIOA->MODER|=(1U<<10);
+	GPIOA->MODER&= ~(1U<<11);
+	GPIOC->MODER&= ~((1U<<26)|(1<<27));
+	while(1)
+		{
+		if((GPIOC->IDR&(1<<13))==1)
+		{
+			GPIOA->ODR |=(1U<<5);
+			delay(1000);
+			}
+		else
+			{
+			  GPIOA->ODR &=~(1U<<5);
+			  delay(1000);
+			}
+
+		}
+}
