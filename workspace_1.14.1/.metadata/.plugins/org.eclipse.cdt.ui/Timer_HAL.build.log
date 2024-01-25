@@ -1,0 +1,10 @@
+14:16:58 **** Incremental Build of configuration Debug for project Timer_HAL ****
+make -j12 all 
+arm-none-eabi-size  Timer_HAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13156	     20	   1860	  15036	   3abc	Timer_HAL.elf
+Finished building: default.size.stdout
+ 
+
+14:16:59 Build Finished. 0 errors, 0 warnings. (took 684ms)
+

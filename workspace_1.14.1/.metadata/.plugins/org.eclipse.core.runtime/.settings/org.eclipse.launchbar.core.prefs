@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:hello.exe,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Push_Button,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first_project Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ON_BOARD_PUSH_BUTTON Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INTRUPT_PUSH_BUTTON Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Timer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Timer2 Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:hello.exe,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Push_Button,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first_project Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ON_BOARD_PUSH_BUTTON Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INTRUPT_PUSH_BUTTON Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Timer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Timer2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Timer_HAL Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MCAL_PWM Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INTRUPT_PUSH_BUTTON\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Push_Button/activeLaunchTarget=null\:---
