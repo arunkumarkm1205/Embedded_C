@@ -7,7 +7,7 @@ int main()
 
 
 	RCC ->APB1ENR =(1U<<0);
-	TIM2->PSC=79;
+	TIM2->PSC=7999;
 	TIM2->ARR=1000;
 	TIM2->CNT=0;
 	TIM2->CR1=(1U<<0);
