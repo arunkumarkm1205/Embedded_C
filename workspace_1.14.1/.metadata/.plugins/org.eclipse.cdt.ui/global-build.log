@@ -64,3 +64,36 @@ arm-none-eabi-size  ADC_DMA.elf
   19292	     20	   1860	  21172	   52b4	ADC_DMA.elf
 Finished building: default.size.stdout
  
+23:24:06 **** Rebuild of configuration Debug for project nptl ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o nptl.o "..\\nptl.c" 
+..\nptl.c:3:6: warning: return type of 'main' is not 'int' [-Wmain]
+    3 | void main()
+      |      ^~~~
+..\nptl.c: In function 'main':
+..\nptl.c:6:11: warning: unused variable 'z' [-Wunused-variable]
+    6 |   int c=0,z=0,j;
+      |           ^
+gcc -o nptl.exe nptl.o 
+23:24:30 **** Building Selected Files of configuration Debug for project nptl ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o nptl.o "..\\nptl.c" 
+..\nptl.c:3:6: warning: return type of 'main' is not 'int' [-Wmain]
+    3 | void main()
+      |      ^~~~
+..\nptl.c: In function 'main':
+..\nptl.c:6:11: warning: unused variable 'z' [-Wunused-variable]
+    6 |   int c=0,z=0,j;
+      |           ^
+23:24:51 **** Incremental Build of configuration Debug for project nptl ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o nptl.o "..\\nptl.c" 
+..\nptl.c:3:6: warning: return type of 'main' is not 'int' [-Wmain]
+    3 | void main()
+      |      ^~~~
+..\nptl.c: In function 'main':
+..\nptl.c:6:11: warning: unused variable 'z' [-Wunused-variable]
+    6 |   int c=0,z=0,j;
+      |           ^
+gcc -o nptl.exe nptl.o 
+Info: Nothing to build for nptl
