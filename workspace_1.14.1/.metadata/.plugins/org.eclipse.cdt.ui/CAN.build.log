@@ -1,0 +1,39 @@
+15:21:32 **** Incremental Build of configuration Debug for project CAN ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'CAN_TX':
+../Core/Src/main.c:216:53: warning: pointer targets in passing argument 3 of 'HAL_CAN_AddTxMessage' differ in signedness [-Wpointer-sign]
+  216 |         if( HAL_CAN_AddTxMessage(&hcan, &TX_Header, tdata, &TxMailbox )!= HAL_OK)
+      |                                                     ^~~~~
+      |                                                     |
+      |                                                     char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:223,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_can.h:680:54: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  680 |                                        const uint8_t aData[], uint32_t *pTxMailbox);
+      |                                        ~~~~~~~~~~~~~~^~~~~~~
+../Core/Src/main.c: In function 'CAN_RX':
+../Core/Src/main.c:245:65: warning: pointer targets in passing argument 4 of 'HAL_CAN_GetRxMessage' differ in signedness [-Wpointer-sign]
+  245 |         if(HAL_CAN_GetRxMessage(&hcan, CAN_RX_FIFO0, &RX_Header,rdata)!= HAL_OK)
+      |                                                                 ^~~~~
+      |                                                                 |
+      |                                                                 char *
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_can.h:686:78: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  686 |                                        CAN_RxHeaderTypeDef *pHeader, uint8_t aData[]);
+      |                                                                      ~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "CAN.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\CAN\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CAN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CAN.elf
+ 
+arm-none-eabi-size  CAN.elf 
+arm-none-eabi-objdump -h -S CAN.elf  > "CAN.list"
+   text	   data	    bss	    dec	    hex	filename
+   9828	     20	   1676	  11524	   2d04	CAN.elf
+Finished building: default.size.stdout
+ 
+Finished building: CAN.list
+ 
+
+15:21:33 Build Finished. 0 errors, 2 warnings. (took 922ms)
+

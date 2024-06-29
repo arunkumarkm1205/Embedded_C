@@ -1,91 +1,28 @@
-13:02:17 **** Incremental Build of configuration Debug for project UART_receiving ****
+16:24:24 **** Incremental Build of configuration Debug for project F3_CAN ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "UART_receiving.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\UART_receiving\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_receiving.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UART_receiving.elf
- 
-arm-none-eabi-size  UART_receiving.elf 
-arm-none-eabi-objdump -h -S UART_receiving.elf  > "UART_receiving.list"
+arm-none-eabi-size  F3_CAN.elf 
    text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
+   9820	     28	   1676	  11524	   2d04	F3_CAN.elf
 Finished building: default.size.stdout
  
-Finished building: UART_receiving.list
- 
-13:04:34 **** Incremental Build of configuration Debug for project UART_receiving ****
+16:24:33 **** Incremental Build of configuration Debug for project F3_CAN ****
 make -j12 all 
-arm-none-eabi-size  UART_receiving.elf 
+arm-none-eabi-size  F3_CAN.elf 
    text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
+   9820	     28	   1676	  11524	   2d04	F3_CAN.elf
 Finished building: default.size.stdout
  
-13:04:52 **** Incremental Build of configuration Debug for project UART_receiving ****
+16:26:38 **** Incremental Build of configuration Debug for project F3_CAN ****
 make -j12 all 
-arm-none-eabi-size  UART_receiving.elf 
+arm-none-eabi-size  F3_CAN.elf 
    text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
+   9820	     28	   1676	  11524	   2d04	F3_CAN.elf
 Finished building: default.size.stdout
  
-13:05:20 **** Incremental Build of configuration Debug for project UART_receiving ****
+16:27:35 **** Incremental Build of configuration Debug for project F3_CAN ****
 make -j12 all 
-arm-none-eabi-size  UART_receiving.elf 
+arm-none-eabi-size  F3_CAN.elf 
    text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
+   9820	     28	   1676	  11524	   2d04	F3_CAN.elf
 Finished building: default.size.stdout
- 
-13:07:13 **** Incremental Build of configuration Debug for project UART_receiving ****
-make -j12 all 
-arm-none-eabi-size  UART_receiving.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
-Finished building: default.size.stdout
- 
-13:10:22 **** Incremental Build of configuration Debug for project UART_receiving ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_UART_RxcpltCallback':
-../Core/Src/main.c:110:31: warning: passing argument 1 of 'HAL_UART_Transmit_IT' from incompatible pointer type [-Wincompatible-pointer-types]
-  110 |          HAL_UART_Transmit_IT(&huart2, (uint8_t *)txdata, 15);
-      |                               ^~~~~~~
-      |                               |
-      |                               UART_HandleTypeDef ** {aka struct __UART_HandleTypeDef **}
-In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
-                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1488:60: note: expected 'UART_HandleTypeDef *' {aka 'struct __UART_HandleTypeDef *'} but argument is of type 'UART_HandleTypeDef **' {aka 'struct __UART_HandleTypeDef **'}
- 1488 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                        ~~~~~~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:111:30: warning: passing argument 1 of 'HAL_UART_Receive_IT' from incompatible pointer type [-Wincompatible-pointer-types]
-  111 |          HAL_UART_Receive_IT(&huart2, (uint8_t *)txdata, 15);
-      |                              ^~~~~~~
-      |                              |
-      |                              UART_HandleTypeDef ** {aka struct __UART_HandleTypeDef **}
-../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1489:59: note: expected 'UART_HandleTypeDef *' {aka 'struct __UART_HandleTypeDef *'} but argument is of type 'UART_HandleTypeDef **' {aka 'struct __UART_HandleTypeDef **'}
- 1489 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-      |                                       ~~~~~~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "UART_receiving.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\UART_receiving\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_receiving.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UART_receiving.elf
- 
-arm-none-eabi-size  UART_receiving.elf 
-arm-none-eabi-objdump -h -S UART_receiving.elf  > "UART_receiving.list"
-   text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
-Finished building: default.size.stdout
- 
-Finished building: UART_receiving.list
- 
-13:10:37 **** Incremental Build of configuration Debug for project UART_receiving ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "UART_receiving.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\arunk\STM32CubeIDE\Embedded_C\workspace_1.14.1\UART_receiving\STM32F334R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_receiving.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UART_receiving.elf
- 
-arm-none-eabi-size  UART_receiving.elf 
-arm-none-eabi-objdump -h -S UART_receiving.elf  > "UART_receiving.list"
-   text	   data	    bss	    dec	    hex	filename
-  13464	     12	   1724	  15200	   3b60	UART_receiving.elf
-Finished building: default.size.stdout
- 
-Finished building: UART_receiving.list
  

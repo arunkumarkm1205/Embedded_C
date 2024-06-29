@@ -1,0 +1,10 @@
+16:27:35 **** Incremental Build of configuration Debug for project F3_CAN ****
+make -j12 all 
+arm-none-eabi-size  F3_CAN.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9820	     28	   1676	  11524	   2d04	F3_CAN.elf
+Finished building: default.size.stdout
+ 
+
+16:27:35 Build Finished. 0 errors, 0 warnings. (took 266ms)
+
